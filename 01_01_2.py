@@ -24,6 +24,9 @@ def is_unique(s: str) -> bool:
 	if len(s) == 0:
 		return True
 	
+	if len(s) > 128: # assuming only ASCII in input
+		return False
+	
 	track_arr = [False] * 128
 	
 	for c in s:
