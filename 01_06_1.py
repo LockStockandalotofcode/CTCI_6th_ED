@@ -22,7 +22,13 @@ test_cases = {
 	"abcd" : "abcd",
 	"" : "",
 	"aa" : "aa",
-	"AAAaaBB": "A3a2B2"
+	"AAAaaBB": "A3a2B2",
+	"aabcccccaaa": "a2b1c5a3",
+    "abcdef": "abcdef",
+    "aabb": "aabb",
+    "aaa": "a3",
+    "a" : "a",
+    "" : ""
 }
 
 # CODE
