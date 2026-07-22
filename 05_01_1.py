@@ -1,10 +1,22 @@
 # LOGIC & CODE
+# build a clearing mask, from index i through j, 0s rest all 1s(infinite length), taking & of n with mask, clears the bits from i to j
+# then | of m and n gives the result
 def insert_bits(n: int, m: int, i: int, j: int) -> int:
-    # base logic
-    # j > i
-    for idx in range(i, j+1):
-        result_bit = (n[idx] & 0) | m[idx]
-        n[idx] = result_bit
+    # making the MASK
+    # ones to left of index j
+    ones_to_left = -1 << (j + 1) # this operator shifts by j+1 places, so from index j: its all 0
+    ones_to_right = (1 << i) - 1 # creating fixed i-length number of all 1s
+    mask = ones_to_left | ones_to_right
+
+    # clear i to j bits in n
+    n = n & mask
+
+    # shift bits  of m by i places to left, before merging
+    m = m << i
+
+    # put m's bits in i to j
+    n = n | m
+
     return n
 
 # =====================================================================
