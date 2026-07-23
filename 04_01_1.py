@@ -1,3 +1,28 @@
+# more optimisations + realisation
+
+# 1. visited starts empty, doesnt get initialised with node1, this could get node1 visited once more when theres a cycle between      anyone of its neighbor and the node1; shouldnt be missed 
+
+# 2. KeyError: graph_dict[curr_node] crashes if curr_node exists as a neighbor in an edge list, but was never added as a top level key in graph_dict
+    #  in this partivular test case, even leaf nodes are listed as a top-level key with no neighbors,
+    #  eg. 
+    # 'B' exists in A's neighbor list, but is NOT a top-level key in graph
+    # graph = {
+    #     "A": ["B"], 
+    #     "C": []
+    # }
+
+# 3. redundant condition check curr_node != node1; look in code
+
+# 4. (optimisation) Enqueue Check vs dequeue check:
+#     checking if any neighbor node is the target node, while enqueuing them helps with short-circuiting,
+#     which would otherwise require to wait until this node gets dequeued
+
+# attempt 2: reading the question again, route between node, not necessarily from node1 to node2, so bidirectional BFS also can work
+# also recursive DFS is also possible, albeit not the best for path problems
+# Although, I do feel bidirectional BFS, won't always be time efficient than standard BFS, because bidirectional BFS is based on collision on the shortest path, somewhere in the middle, it may be possible, that from node1 to node2, there's one path that is different from node2 to node1
+# it would be better solution in undirected graph, almost alwyas
+# concolusion: bidirectional BFS doesnt always work in directed graph
+
 # clarification: 
 # could there be duplicate nodes, diff nodes with same values
 
@@ -17,18 +42,23 @@ def route_between_nodes(graph_dict, node1, node2) -> bool:
     queue = deque([node1])
     found_path = False # flag for result
     # maintain a set of visited nodes
-    visited = set()
+    visited = {node1}
+    # visited = set()
 
     while queue: # std python way, if empty this returns false
         curr_node = queue.popleft()
         # base check
-        if curr_node == node2 and curr_node != node1: # but this fails when duplicate nodes exist
+        if curr_node == node2: # and curr_node != node1; is a redundant condition
+                               # if curr_node = node2 then its not node1, since node2 != node1, from early return, trivial case below absolute base case 
             found_path = True
             return found_path
         
         # append all neighbors
         for neighbor in graph_dict[curr_node]:
             if neighbor not in visited:
+                
+                if neighbor == node2:
+                    return True
                 queue.append(neighbor)
                 visited.add(neighbor)
 
