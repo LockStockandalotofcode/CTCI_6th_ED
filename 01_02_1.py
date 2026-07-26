@@ -5,20 +5,23 @@ def check_permutation(str1: str, str2: str) -> bool:
         return False
     
     # hash set- not a good idea, since python sets dont store duplicate values
-    set1 = set()
-    # we traverse str1, add all its elements to set1
-    # then we traverse str2, remove all its elements to set1
+    hash_table = {} # char: freq
+    # we traverse str1, add all its elements to dict
+    # then we traverse str2, remove all its elements to dict
     # if nothing remains, they are, otherwise they're not
-    for c in str1:
-        set1.add(c)
+    for char in str1:
+        hash_table[char] = hash_table.get(char, 0) + 1
 
-    for c in str2:
-        set1.remove(c)
+    for char in str2:
+        if char not in hash_table or hash_table[char] == 0:
+            return False
+        hash_table[char] -= 1
+        
+    for key, val in hash_table.items():
+        if val != 0:
+            return False
 
-    if not set1:
-        return True
-
-    return False
+    return True
 
 
 
