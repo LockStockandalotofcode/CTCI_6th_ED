@@ -7,10 +7,8 @@ class ListNode:
         self.next = next
 
 def find_intersection(head1: ListNode | None, head2: ListNode | None) -> ListNode | None:
-    if not head1 and not head2:
-        return True
     if not head1 or not head2:
-        return False 
+        return None 
 
     count = 0
 
