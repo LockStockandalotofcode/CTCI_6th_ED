@@ -5,14 +5,12 @@ def one_away(s1: str, s2: str) -> bool:
     if abs(len(s1) - len(s2)) > 1:
         return False
     
+    # Looping through one character at a time, until mismatch is found, then we can simply compare the rest of the string suffix, to be one-away as required
     if abs(len(s1) - len(s2)) == 0:
         # check for replacement
-        replacement_count = 0
         for index_ptr in range(len(s1)):
             if s1[index_ptr] != s2[index_ptr]:
-                replacement_count += 1
-                if  replacement_count > 1:
-                    return False
+                return s1[index_ptr + 1: ] == s2[index_ptr + 1: ]
         return True
 
     if abs(len(s1) - len(s2)) == 1:
