@@ -21,9 +21,14 @@ def remove(s: list, index: int) -> str:
 def one_away(s1: str, s2: str) -> bool:
     if not s1 and not s2: return True
 
-    list_s1 = list(s1) #if len(s1) > len(s2) else list(s2)
+    # to ensure s1 is the shorter string and s2 is the longer
+    if len(s1) > len(s2):
+        s1, s2 = s2, s1
+        list_s1 = list(s2)
+    list_s1 = list(s1)
 
-    for idx, char in enumerate(list_s1):
+    # looping through the longer string
+    for idx, char in enumerate(s2):
         removed_char_s1 = remove(list_s1, idx)
         if removed_char_s1 == s2:
             return True
