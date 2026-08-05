@@ -27,8 +27,12 @@ def detect_loop(head: ListNode | None) -> ListNode | None:
     # else return None
     if loop_exists:
         # find the the beginning of loop
-        # as per my observation, its always 2 nodes before the loop begins that slow = fast 
-        fast = fast.next.next
+        # reset slow to head node
+        slow = head
+        while fast != slow:
+            fast = fast.next
+            slow = slow.next
+        
         return fast
 
     else:
