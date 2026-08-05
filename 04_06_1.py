@@ -15,7 +15,11 @@ def inorder_successor(node: TreeNodeWithParent):
     # case 3: node is right child - climbing up until an ancestor is found that is a left child
 
     if not node.parent:
-        return node.right
+        # if root node, successor is leftmost node of right subtree
+        successor = node.right
+        while successor and successor.left:
+            successor = successor.left
+        return successor
 
     if node == node.parent.left:
         return node.right if node.right else node.parent
@@ -23,31 +27,33 @@ def inorder_successor(node: TreeNodeWithParent):
         ancestor = node
         while ancestor.parent and ancestor != ancestor.parent.left:
             # climb up the ancestors
-            ancestor = node.parent 
+            ancestor = ancestor.parent 
 
         return ancestor.parent if ancestor.parent else None
 
 def run_inorder_successor_tests():
     # Build a BST with explicit parent pointers:
-    #          20
-    #        /    \
-    #       10     30
-    #      /  \
-    #     5   15
     n20 = TreeNodeWithParent(20)
     n10 = TreeNodeWithParent(10, parent=n20)
     n30 = TreeNodeWithParent(30, parent=n20)
     n20.left, n20.right = n10, n30
-
     n5 = TreeNodeWithParent(5, parent=n10)
     n15 = TreeNodeWithParent(15, parent=n10)
     n10.left, n10.right = n5, n15
+    #          20
+    #        /    \
+    #       10     30
+    #      /  \   /
+    #     5   15 25   <-- Added 25
+
+    n25 = TreeNodeWithParent(25, parent=n30)
+    n30.left = n25
 
     test_cases = [
         (n5, n10),  # Successor of 5 (leaf) is parent 10
         (n10, n15),  # Successor of 10 (has right child 15) is 15
         (n15, n20),  # Successor of 15 (rightmost leaf of left subtree) is root 20
-        (n20, n30),  # Successor of 20 is min node of right subtree (30)
+        (n20, n25),  # Successor of 20 is min node of right subtree (30)
         (n30, None),  # Successor of 30 (largest element) is None
     ]
 
