@@ -6,93 +6,47 @@ class TreeNode:
         self.left = left
         self.right = right
 
-# at every node, we have 3 choices between going and adding its sibling node or left child, or right child
-
 def bst_sequences(root: TreeNode | None) -> list[list[int]]:
     if not root:
         return []
-
-    # # recursion & backtracking
-    # bst_sequences(root.left)
-    # bst_sequences(root.right)
-
-    final = [] # initialise with root node
-    visited = set()
-    visited.add(root.val, root.left.val)
-    build_traversal(root, root.left, [root.val, root.left.val], visited, final)
-
-    visited = set()
-    visited.add(root.val, root.right.val)
-    build_traversal(root, root.right, [root.val, root.right.val], visited, final)
-
-    return final
-
-def build_traversal(parent: TreeNode, node: TreeNode, curr_list: list[int], visited: set, final_lists: list[list[int]]) -> None:
-    # when going forward recursively we add the element
-    # we need to have a base case, when there are no more nodes, then we append that list to the result
-    # once we recurse back, backtracking is done through popping all traversal from this node
-
-    # def go_forward():
-
-
     
-    # The below order in which they are executed doesnot matter, since we are convering all options of traversal
+    # A valid choice is not just the direct relatives of a node (sibling node, or child nodes)
+    # any unvisited node in the tree whose parent is added to the list, is a valid choice
+    # root is always the starting point for such traversals
+    result = []
 
-    # choice 1: next node is sibling node
-                                                # if next_node.parent is not None: # except for root node
-                                                # we are not covering root node here, since we want parent link in the tree for this to work, not guaranteed
-    # if node is left child, to right child, otherwise vice versa
-    next_node = parent.right if node == parent.left else parent.left
+    def helper(curr_path: list[int], valid_uncovered_nodes: list[TreeNode]):
+        if len(valid_uncovered_nodes) == 0:
+            result.append(list(curr_path))
+            # need to append a copy of the current path,
+            # appending curr_path appends the pointer to this curr_path, instead and doesnot append a list to the final result
+            #  since the variable curr_path points to something that is constantly modified throughout until the the function gets executed
+            #  list() creates a shallow copy to the current state of curr_path
+            return
 
-    # BASE CASE CHECK
-    if next_node in visited and node.left in visited and node.right in visited:
-        final_lists.append(curr_list)
-        return
+        # choose a valid node, append its children
+        # this list that is passed into bakcktrack function serves as a set to check all visited nodes and helps to continue build the path forward
+        for i, node in enumerate(valid_uncovered_nodes):
+            next_valid_nodes = valid_uncovered_nodes[:i] + valid_uncovered_nodes[i + 1: ]
+            # we should not use valid_uncovered_nodes.remove() or .pop() even temporarily
+            # since that would mean modifying the iterable, over which we are iterating
+
+            # append current node's children
+            if node.left:
+                next_valid_nodes.append(node.left)
+            if node.right:
+                next_valid_nodes.append(node.right)
+
+            # recurse
+            curr_path.append(node.val)
+            helper(curr_path, next_valid_nodes)
+
+            # backtrack
+            curr_path.pop()
     
-    curr_list.append(next_node.val)
-    # recurse 
-    build_traversal(parent, next_node, curr_list, visited, final_lists)
-    # if reached end, append it to the final results list of lists
-    # backtrack
-    curr_list.pop()
+    helper([], [root])
+    return result
     
-
-    # choice 2: next node is left child node
-    # if node is left child, to right child, otherwise vice versa
-    next_node = node.left
-    curr_list.append(next_node.val)
-    # recurse 
-    build_traversal(parent, next_node, curr_list, visited, final_lists)
-    # backtrack
-    curr_list.pop()
-    
-    
-    # choice 3: next node is right child node
-    # if node is left child, to right child, otherwise vice versa
-    next_node = parent.right if node == parent.left else parent.left
-    curr_list.append(next_node.val)
-    # recurse 
-    build_traversal(parent, next_node, curr_list)
-    # backtrack
-    curr_list.pop()
-
-    return
-
-# setup a function to incorporate going forward from any node, to get rid of the redundant code in above function
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def insert_into_bst(root: Optional[TreeNode], val: int) -> TreeNode:
     if root is None:
