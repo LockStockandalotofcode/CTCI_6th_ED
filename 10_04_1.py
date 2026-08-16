@@ -32,14 +32,10 @@ def search_listy(listy: Listy, target: int) -> int:
 
 def get_length_listy(listy: Listy) -> int:
     check = 1
-    while check >= 0:
-        if listy.element_at(check) == -1:
-            while check >= 0:
-                if listy.element_at(check) != -1:
-                    break
-                check -= 1
-            break
+    while listy.element_at(check) != -1:
         check *= 2
+    while  listy.element_at(check) == -1:
+        check -= 1
 
     return (check + 1)
 
