@@ -12,21 +12,18 @@ def place_queens_helper(n: int = 8, row: int = 0, results: list[list[int]] = [],
     if row == n:
         results.append(curr_arrangement.copy())
         return
-    else:
-        for col in range(n): # recursion 
-            if check_valid_cell(col, row, curr_arrangement):
-                curr_arrangement.append(col)
-                place_queens_helper(n, row + 1, results, curr_arrangement)
-                curr_arrangement.pop()
+    for col in range(n): # recursion 
+        if check_valid_cell(col, row, curr_arrangement):
+            curr_arrangement.append(col)
+            place_queens_helper(n, row + 1, results, curr_arrangement)
+            curr_arrangement.pop()
     
 def check_valid_cell(col: int, row: int, curr_arrangement: list[int]) -> bool:
-    # check for column clash
-    for col2 in curr_arrangement:
+    for row2, col2 in enumerate(curr_arrangement):
+        # check for column clash
         if col == col2:
             return False
-
-    # check for diagonal clash - difference between rows and cols is same for diagonal elements
-    for row2, col2 in enumerate(curr_arrangement):
+        # check for diagonal clash - difference between rows and cols is same for diagonal elements
         if abs(row - row2) == abs(col - col2):
             return False
 
