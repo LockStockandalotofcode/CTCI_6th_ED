@@ -1,10 +1,11 @@
-from typing import List
+from typing import List, Iterator
 
-def find_duplicates(arr: List[int], max_val: int = 32000) -> List[int]:
+def find_duplicates(arr: List[int], max_val: int = 32000) -> Iterator[int]:
     """CTCI 10.8: Finds duplicate numbers in [1, max_val] using bit vector logic."""
 
     #  1. scan the list, use 4KB bitvector, covers 1 to 32 * (2 ^ 10); 32 * (10 ^ 3) is less than this, so easily covered 
     bitvector = bytearray((max_val // 8) + 1)
+    # 0- based indexing, standard method as in python bytearray
     dups = []
     for num in arr:
         # breakpoint()
@@ -13,9 +14,7 @@ def find_duplicates(arr: List[int], max_val: int = 32000) -> List[int]:
         if (bitvector[byte_idx] & (1 << (bit_idx))) == 0: # get_bit
             bitvector[byte_idx] |= (1 << bit_idx) # set_bit
         else:
-            dups.append(num)
-
-    return dups
+            yield(num)
 
 def run_find_duplicates_tests():
     test_cases = [
