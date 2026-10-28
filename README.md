@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## Divide and Conquer
 |  |
@@ -42,4 +43,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
+## Math
+|  |
+| ------- |
+| [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
+## Two Pointers
+|  |
+| ------- |
+| [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 <!---LeetCode Topics End-->
