@@ -4,24 +4,17 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         # reverse the array
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-            right -= 1
-
         k %= len(nums)
-        # reverse two sections: k numbers from front, and the latter section
-        left, right = 0, k - 1
-        while left <= right:
-            nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-            right -= 1
+        n = len(nums)
 
-        left, right = k, len(nums) - 1
-        while left <= right:
-            nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-            right -= 1
+        def reverse(start: int, end: int) -> None:
+            while start <= end:
+                nums[start], nums[end] = nums[end], nums[start]
+                start += 1
+                end -= 1
+        
+        reverse(0, n - 1)
+        reverse(0, k - 1)
+        reverse(k, n - 1)
 
         return
