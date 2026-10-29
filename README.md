@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## String
 |  |
@@ -18,11 +19,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
+| [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## Divide and Conquer
 |  |
 | ------- |
+| [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## Sorting
 |  |
@@ -57,6 +60,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0199-binary-tree-right-side-view) |
 ## Depth-First Search
 |  |
@@ -72,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0199-binary-tree-right-side-view) |
 ## Matrix
 |  |
