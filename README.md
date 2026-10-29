@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
 | [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## Divide and Conquer
@@ -46,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
 | [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 ## Two Pointers
 |  |
@@ -71,4 +73,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0199-binary-tree-right-side-view) |
+## Matrix
+|  |
+| ------- |
+| [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
 <!---LeetCode Topics End-->
