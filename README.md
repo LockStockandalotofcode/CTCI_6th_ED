@@ -15,10 +15,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0078-subsets](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0078-subsets) |
 ## Array
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
+| [0078-subsets](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0078-subsets) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0189-rotate-array](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0189-rotate-array) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
@@ -82,4 +84,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
