@@ -7,10 +7,11 @@ class Solution:
         subsets = self.subsets(nums[: -1])
         last_element = nums[-1]
         # update the prev state, adding the last element
-        results = subsets.copy()
-        for subset in subsets:
+        n = len(subsets)
+        for i in range(n):
+            subset = subsets[i]
             new_addition = subset.copy()
             new_addition.append(last_element)
-            results.append(new_addition)
+            subsets.append(new_addition)
 
-        return results
+        return subsets
