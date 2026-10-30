@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0211-design-add-and-search-words-data-structure) |
 ## Backtracking
 |  |
 | ------- |
@@ -72,6 +73,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0199-binary-tree-right-side-view) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0211-design-add-and-search-words-data-structure) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -99,4 +101,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0075-sort-colors) |
+## Design
+|  |
+| ------- |
+| [0211-design-add-and-search-words-data-structure](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0211-design-add-and-search-words-data-structure) |
+## Trie
+|  |
+| ------- |
+| [0211-design-add-and-search-words-data-structure](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0211-design-add-and-search-words-data-structure) |
 <!---LeetCode Topics End-->
