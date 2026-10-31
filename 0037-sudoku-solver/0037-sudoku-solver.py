@@ -3,43 +3,46 @@ class Solution:
         used_row = [set() for _ in range(9)]
         used_col = [set() for _ in range(9)]
         used_box = [set() for _ in range(9)]
-        for i in range(9):
-            for j in range(9):
-                if board[i][j] != ".":
-                    val = int(board[i][j])
-                    used_row[i].add(val)
-                    used_col[j].add(val)
-                    box_id = (i // 3) * 3 + (j // 3)
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] != ".":
+                    val = int(board[r][c])
+                    used_row[r].add(val)
+                    used_col[c].add(val)
+                    box_id = (r // 3) * 3 + (c // 3)
                     used_box[box_id].add(val)
 
-        def is_valid(i, j, val):
-            box_id = (i // 3) * 3 + (j // 3)
-            return val not in used_box[box_id] and val not in used_row[i] and val not in used_col[j]
+        def is_valid(r, c, val):
+            box_id = (r // 3) * 3 + (c // 3)
+            return val not in used_box[box_id] and val not in used_row[r] and val not in used_col[c]
 
-        def dfs(i, j):
-            if i == 9:
+        def dfs(r, c):
+            if r == 9:
                 return True
-            next_i = next_j = 0
-            if j < 8:
-                next_i, next_j = i, j+1
-            elif j == 8:
-                next_i, next_j = i+1, 0
-            if board[i][j] != ".":
-                return dfs(next_i, next_j)
+            next_r = next_c = 0
+            if c < 8:
+                next_r, next_c = r, c+1
+            elif c == 8:
+                next_r, next_c = r+1, 0
+            if board[r][c] != ".":
+                return dfs(next_r, next_c)
 
-            box_id = (i // 3) * 3 + (j // 3)
-            for x in range(1, 10):
-                if is_valid(i, j, x):
-                    board[i][j] = str(x)
-                    used_row[i].add(x)
-                    used_col[j].add(x)
-                    used_box[box_id].add(x)
-                    if dfs(next_i, next_j):
+            box_id = (r // 3) * 3 + (c // 3)
+            for val in range(1, 10):
+                if is_valid(r, c, val):
+                    # update the board
+                    board[r][c] = str(val)
+                    used_row[r].add(val)
+                    used_col[c].add(val)
+                    used_box[box_id].add(val)
+                    # recurse
+                    if dfs(next_r, next_c):
                         return True
-                    board[i][j] = "."
-                    used_row[i].remove(x)
-                    used_col[j].remove(x)
-                    used_box[box_id].remove(x)
+                    # backtrack, if it didnt work
+                    board[r][c] = "."
+                    used_row[r].remove(val)
+                    used_col[c].remove(val)
+                    used_box[box_id].remove(val)
             return False
         dfs(0, 0)
         return
