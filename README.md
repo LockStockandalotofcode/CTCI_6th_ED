@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0347-top-k-frequent-elements](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0347-top-k-frequent-elements) |
 ## String
@@ -16,10 +17,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
 | [0078-subsets](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0078-subsets) |
 ## Array
 |  |
 | ------- |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
 | [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
 | [0075-sort-colors](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0075-sort-colors) |
 | [0078-subsets](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0078-subsets) |
@@ -88,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
 | [0048-rotate-image](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0048-rotate-image) |
 ## Bit Manipulation
 |  |
@@ -109,4 +113,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0211-design-add-and-search-words-data-structure](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0211-design-add-and-search-words-data-structure) |
+## Algorithm X
+|  |
+| ------- |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
+## Dancing Links
+|  |
+| ------- |
+| [0037-sudoku-solver](https://github.com/LockStockandalotofcode/CTCI_6th_Ed/tree/master/0037-sudoku-solver) |
 <!---LeetCode Topics End-->
